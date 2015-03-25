@@ -42,15 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
--(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskAllButUpsideDown;  // 可以修改为任何方向
-}
-
--(BOOL)shouldAutorotate{
-    return YES;
-}
-
 -(void)didRotate:(NSNotification *)notification{
     
     UIDeviceOrientation newOrientation = [[UIDevice currentDevice] orientation];
@@ -82,9 +73,18 @@
     NSLog(@"didRotate portrait  : CGFloat x=%f, CGFloat y=%f, CGFloat width=%f, CGFloat height=%f ",0.0,(screenWidth-height)/2,screenWidth,height);
 }
 
-// iOS5.0
--(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
-    return UIInterfaceOrientationMaskAllButUpsideDown;  // 可以修改为任何方向
-}
+//// iOS5.0
+//-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+//    return UIInterfaceOrientationMaskAllButUpsideDown;  // 可以修改为任何方向
+//}
+//
+//-(NSUInteger)supportedInterfaceOrientations{
+//    return UIInterfaceOrientationMaskAllButUpsideDown;  // 可以修改为任何方向
+//}
+//
+//-(BOOL)shouldAutorotate{
+//    return YES;
+//}
+
 
 @end
